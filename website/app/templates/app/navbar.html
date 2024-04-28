@@ -1,7 +1,7 @@
-{% load static %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+{% load static%}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">
-    <img src="{% static 'app/images/product/Neel.png' %}" height="50" width="100">
+    <img src="{% static "app/images/product/Neel.png" %}" height="50" style="margin: 10; padding: 10;">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -16,57 +16,28 @@
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Products
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
-          <a class="dropdown-item" href="#">Milk</a>
-          <a class="dropdown-item" href="#">Curd</a>
-          <a class="dropdown-item" href="#">Milkshake</a>
-          <a class="dropdown-item" href="#">Lassi</a>
-          <a class="dropdown-item" href="#">Ghee</a>
-          <a class="dropdown-item" href="#">Panner</a>
-          <a class="dropdown-item" href="#">Cheese</a>
-          <a class="dropdown-item" href="#">IceCream</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">AboutUs</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">ContactUs</a>
+        <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInfo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Info
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownInfo">
-          <a class="dropdown-item" href="#">Profile</a>
-          <a class="dropdown-item" href="#">Orders</a>
-          <a class="dropdown-item" href="#">Change Password</a>
-          <a class="dropdown-item" href="#">Logout</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Cart</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Wishlist</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Registrations</a>
-      </li>
-    </ul>
+    
+    <!-- Search form -->
+    <form class="form-inline my-2 my-lg-0">
+      <div class="d-flex align-items-center">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </div>
+    </form>
+    
   </div>
 </nav>
