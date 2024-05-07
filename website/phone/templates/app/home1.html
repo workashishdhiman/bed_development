@@ -1,5 +1,55 @@
 {% extends 'app/base1.html' %}
 {% load static %}
+{% block title%}Home{% endblock title%}
+{% block banner-content %}
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src={% static "app/images/banner1.avif" %} class="d-block w-100" alt="imgs1">
+      </div>
+      <div class="carousel-item">
+        <img src={% static "app/images/banner2.jpeg" %} class="d-block w-100" alt="imsg2">
+      </div>
+      <div class="carousel-item">
+        <img src={% static "app/images/banner3.webp" %} class="d-block w-100" alt="imsg3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endblock banner-content %}
+
 {% block main-content %}
-<h1>This is for Motorola website</h1>
+<div id="information-products" class="container">
+    <div class="center">
+        <h1>Products</h1>
+        <p1>Motoloa, a pioneering force in electric mobility, is revolutionizing the way we commute. With an unwavering commitment to sustainability and innovation, Motoloa brings cutting-edge electric vehicles to urban landscapes, empowering individuals to embrace eco-friendly transportation solutions without compromising on style or performance. From sleek electric scooters to futuristic electric bikes, Motoloa's range of products embodies the perfect fusion of elegance and efficiency. With a mission to create a cleaner, greener future for generations to come, Motoloa continues to lead the charge towards a more sustainable tomorrow, one ride at a time</p1>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-3" herf="#">
+            <img src="{% static 'app/images/devices/d1.webp' %}" class="img-fluid border" alt="Imag1">
+        </div>
+        <div class="col-md-4 mb-3" herf="#">
+            <img src="{% static 'app/images/devices/d2.avif' %}" class="img-fluid border" alt="Imag1">
+        </div>
+        <div class="col-md-4 mb-3 center" herf="#">
+            <img src="{% static 'app/images/devices/d3.jpeg' %}" class="img-fluid border" alt="Imag1">
+        </div>
+    </div>
+</div>
 {% endblock main-content %}
