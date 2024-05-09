@@ -13,7 +13,7 @@ Category=(('WA','WashingMachine'),
 class devices(models.Model):
     Name=models.CharField(max_length=100)
     Description=models.TextField()
-    Category=models.CharField(Category,max_length=2)
+    Category=models.CharField(choices=Category,max_length=2)
     Date_of_Manufacture=models.DateField(default="Now()")
     Serial_Number=models.CharField(max_length=10)
     product_image=models.ImageField(upload_to="devices")
