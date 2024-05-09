@@ -1,4 +1,6 @@
 from django.contrib import admin
-from .views import phone_home
-# Register your models here.
+from .models import devices
 
+@admin.register(devices)
+class devicesModelAdmin(admin.ModelAdmin):
+    list_display=['id','Name']
