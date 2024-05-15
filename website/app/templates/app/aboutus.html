@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock title %}
+
+{% block main-content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+            <img src="{% static 'app/images/product/Neel.png' %}" class="img-fluid" alt="About Us Image">
+        </div>
+        <div class="col-lg-6">
+            <h2>About Our Company</h2>
+            <p>Welcome to Neel, your trusted source for premium quality milk and dairy products. At [Your Company Name], we are dedicated to providing wholesome, nutritious, and delicious dairy products to our customers.</p>
+            <p>Founded in [Year of Establishment], we have been serving our community with the freshest and finest dairy products for over [Number of Years] years. Our commitment to quality, sustainability, and customer satisfaction sets us apart in the dairy industry.</p>
+            <p>Our team of experienced dairy farmers and skilled professionals work tirelessly to ensure that every product meets the highes rds of quality and safety. From our farm to your table, we take pride in delivering the freshest milk and dairy products to your doorstep.</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-lg-12">
+            <h2>Our Mission</h2>
+            <p>At Neel, our mission is to promote health and well-being through the consumption of nutritious dairy products. We strive to maintain the highest standards of quality, sustainability, and ethical practices in everything we do.</p>
+            <p>We are committed to supporting local farmers, preserving the environment, and contributing to the communities we serve. Our goal is to be a trusted partner in promoting a healthy lifestyle and fostering a sustainable future for generations to come.</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-lg-12">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Quality:</strong> We are committed to delivering the highest quality dairy products to our customers.</li>
+                <li><strong>Sustainability:</strong> We prioritize sustainable farming practices and environmental stewardship.</li>
+                <li><strong>Integrity:</strong> We conduct our business with honesty, integrity, and transparency.</li>
+                <li><strong>Community:</strong> We support our local communities and strive to make a positive impact.</li>
+                <li><strong>Innovation:</strong> We continuously seek innovation and improvement in our products and processes.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

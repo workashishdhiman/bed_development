@@ -1,0 +1,49 @@
+{% extends 'app/base1.html' %}
+{% load static %}
+{% block title %}Category{% endblock title %}
+{% block main-content %}
+<div class="container-fluid">
+    <div class="row">
+        <h1>Product</h1>
+        {% for pr in product %}
+            {{pr.id}}
+            <BR>
+            {{pr.Name}}
+            <Br>
+            {{pr.Description}}
+            <Br>
+            {{pr.Category}}
+            <Br>
+            {{pr.Date_of_Manufacture}}
+            <Br>
+            {{pr.Serial_Number}}
+            <Br>
+            {{pr.Selling_Price}}
+            <Br>
+            {{pr.Discounted_Price}}
+            <Br>
+            <div class="col-sm-9">    
+                <img src="{{pr.product_image.url}}" alt="loc-images" height="450" width="600">
+            </div>
+
+          
+        
+        {% endfor %}
+        
+        <div class="btn success">
+            <h4>Add to cart</h4>
+        
+        </div> 
+        <div class="btn sucess">
+       
+            <h4>Buy now</h4>
+            <br>
+            <br>
+        </div> 
+        <br>
+        <br>
+
+
+    </div>
+</div>    
+{% endblock main-content %}

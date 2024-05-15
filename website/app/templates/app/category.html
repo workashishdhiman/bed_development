@@ -1,6 +1,42 @@
 {% extends 'app/base.html' %}
 {% load static %}
+
 {% block title %}Category{% endblock title %}
+
 {% block main-content %}
-<h1>Category : {{val}}</h1>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Title section -->
+        <div class="col-lg-2"> <!-- Take 1/3 of the screen width on large screens and above -->
+            {% for val in title %}
+                <div class="border p-3 padded">
+                    <div class="btn sm-1">
+                        {{ val.title }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- Product images section -->
+        <div class="col-lg-10"> <!-- Take 2/3 of the screen width on large screens and above -->
+            <div class="row mt-3">
+                {% for prod in product %}
+                    <div class="col-md-3 mb-3"> <!-- Adjust column size for different screen sizes -->
+                        <a href="{% url 'productdetails' prod.id %}">
+                            <div class="btn">
+                                <img src="{{ prod.product_image.url }}"  height="200" width="300" border="1-px" rounded="5-px"  loading="lazy">
+                                <div class="text-center mt-2">{{ prod.title }}</div>
+                                <div class="text-center mt-2">{{ prod.id }}</div>
+                                <!-- Remove this line if you don't want to display the image URL -->
+                                <!-- <div class="text-center mt-2">{{ prod.product_image }}</div> -->
+                            </div>
+                        </a>
+                    </div>
+                    {% if forloop.counter|divisibleby:3 and not forloop.last %} <!-- Change the number to adjust the maximum images per row -->
+                        </div><div class="row mt-3">
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock main-content %}

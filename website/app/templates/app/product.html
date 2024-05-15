@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Product-Details{% endblock title %}
+
+{% block main-content %}
+<div class="container-fluid mt-5"> <!-- Add top margin here -->
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-lg-6">
+            <img src="{{ product.product_image.url }}" class="img-fluid" alt="Product Image">
+        </div>
+        <!-- Product Information -->
+        <div class="col-lg-6">
+            <h2>{{ product.title }}</h2>
+            <!-- Strike-through line for Selling Price -->
+            <p><strong>Selling Price:</strong> <span style="text-decoration: line-through;">${{ product.selling_price }}</span></p>
+            <p><strong>Discounted Price:</strong> ${{ product.discounted_price }}</p>
+            <p><strong>Description:</strong> {{ product.description }}</p>
+            <p><strong>Composition:</strong> {{ product.composition }}</p>
+            <p><strong>Prodapp:</strong> {{ product.prodapp }}</p>
+            <p><strong>Category:</strong> {{ product.get_category_display }}</p>
+            <!-- Add to Cart and Buy Now buttons -->
+            <div class="mt-4">
+                <button type="button" class="btn btn-primary">Add to Cart</button> <!-- Add to Cart button -->
+                <button type="button" class="btn btn-success">Buy Now</button> <!-- Buy Now button -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}
